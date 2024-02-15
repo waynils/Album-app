@@ -1,0 +1,99 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            version('kotlinVersion', '1.9.0')
+            version('androidxVersion_core', '1.12.0')
+            version('androidxVersion_compose', '1.5.0')
+            version('androidxVersion_compose_material3', '1.1.2')
+            version('androidxVersion_composeNavigation', '2.7.6')
+            version('androidxVersion_composeActivity', '1.8.2')
+            version('androidxVersion_lifecycle_runtime_ktx', '2.7.0')
+            version('androidxVersion_hilt_navigation', '1.1.0')
+            version('androidxVersion_room', '2.6.1')
+            version('androidxVersion_paging', '3.2.1')
+            version('googleVersion_accompanist-pager', '0.30.1')
+            version('googleVersion_hilt', '2.48')
+            version('coilVersion', '2.2.2')
+            version('jetbrainsVersion_kotlin_coroutine', '1.7.1')
+            version('retrofitVersion', '2.9.0')
+            version('okhttpVersion', '4.9.3')
+            version('junitVersion', '1.1.5')
+            version('turbineVersion', '1.0.0')
+            version('espressoVersion', '3.5.1')
+            version('mockitoKotlinVersion', '3.2.0')
+            version('mockitoVersion', '4.1.0')
+
+
+            library('androidx.core-ktx', 'androidx.core', 'core-ktx').versionRef('androidxVersion_core')
+
+            library('androidx.compose-ui', 'androidx.compose.ui', 'ui').versionRef('androidxVersion_compose')
+            library('androidx.compose-activity', 'androidx.activity', 'activity-compose').versionRef('androidxVersion_composeActivity')
+            library('androidx.compose-ui-tooling-preview', 'androidx.compose.ui', 'ui-tooling-preview').versionRef('androidxVersion_compose')
+            library('androidx.compose-ui-tooling', 'androidx.compose.ui', 'ui-tooling').versionRef('androidxVersion_compose')
+            library('androidx.compose-ui-test-manifest', 'androidx.compose.ui', 'ui-test-manifest').versionRef('androidxVersion_compose')
+            library('androidx.compose-material', 'androidx.compose.material', 'material').versionRef('androidxVersion_compose')
+            library('androidx.compose-material3', 'androidx.compose.material3', 'material3').versionRef('androidxVersion_compose_material3')
+            library('androidx.compose-navigation', 'androidx.navigation', 'navigation-compose').versionRef('androidxVersion_composeNavigation')
+
+            library('androidx.lifecycle-runtime-ktx', 'androidx.lifecycle', 'lifecycle-runtime-ktx').versionRef('androidxVersion_lifecycle_runtime_ktx')
+            library('androidx.compose-navigation-hilt', 'androidx.hilt', 'hilt-navigation-compose').versionRef('androidxVersion_hilt_navigation')
+
+            library('androidx.room-runtime', 'androidx.room', 'room-runtime').versionRef('androidxVersion_room')
+            library('androidx.room-compiler', 'androidx.room', 'room-compiler').versionRef('androidxVersion_room')
+            library('androidx.room-ktx', 'androidx.room', 'room-ktx').versionRef('androidxVersion_room')
+            library('androidx.room-paging', 'androidx.room', 'room-paging').versionRef('androidxVersion_room')
+
+            library('androidx.paging-runtime', 'androidx.paging', 'paging-runtime-ktx').versionRef('androidxVersion_paging')
+            library('androidx.paging-compose', 'androidx.paging', 'paging-compose').versionRef('androidxVersion_paging')
+
+            library('google.accompanist-pager', 'com.google.accompanist', 'accompanist-pager').versionRef('googleVersion_accompanist-pager')
+
+            library('google.hilt', 'com.google.dagger', 'hilt-android').versionRef('googleVersion_hilt')
+            library('google.hilt-compiler', 'com.google.dagger', 'hilt-compiler').versionRef('googleVersion_hilt')
+
+            library('compose-coil', 'io.coil-kt', 'coil-compose').versionRef('coilVersion')
+
+            library('coroutines', 'org.jetbrains.kotlinx', 'kotlinx-coroutines-android').versionRef('jetbrainsVersion_kotlin_coroutine')
+
+            library('retrofit', 'com.squareup.retrofit2', 'retrofit').versionRef('retrofitVersion')
+            library('retrofit-converter-gson', 'com.squareup.retrofit2', 'converter-gson').versionRef('retrofitVersion')
+
+            library('okhttp3-logging-interceptor', 'com.squareup.okhttp3', 'logging-interceptor').versionRef('okhttpVersion')
+
+            //test
+            library('kotlin-test-junit', 'org.jetbrains.kotlin', 'kotlin-test-junit').versionRef('kotlinVersion')
+            library('kotlinx-coroutines-test', 'org.jetbrains.kotlinx', 'kotlinx-coroutines-test').versionRef('jetbrainsVersion_kotlin_coroutine')
+            library('turbine', 'app.cash.turbine', 'turbine').versionRef('turbineVersion')
+            library('junit', 'androidx.test.ext', 'junit').versionRef('junitVersion')
+            library('mockito', 'org.mockito.kotlin', 'mockito-kotlin').versionRef('mockitoKotlinVersion')
+            library('mockito-core', 'org.mockito', 'mockito-core').versionRef('mockitoVersion')
+            library('mockito-inline', 'org.mockito', 'mockito-inline').versionRef('mockitoVersion')
+            library('espresso', 'androidx.test.espresso', 'espresso-core').versionRef('espressoVersion')
+            library('paging-testing', 'androidx.paging', 'paging-testing').versionRef('androidxVersion_paging')
+
+            bundle('test', ['kotlin-test-junit', 'kotlinx-coroutines-test', 'turbine', 'junit', 'mockito', 'mockito-core', 'mockito-inline', 'paging-testing'])
+
+
+        }
+    }
+}
+rootProject.name = "AlbumApp"
+include ':app'
+include ':data'
+include ':ui'
+include ':domain'
+include ':lib'
