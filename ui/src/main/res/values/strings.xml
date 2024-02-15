@@ -1,0 +1,10 @@
+<resources>
+    <string name="error_title">Sorry</string>
+    <string name="error_subtitle_default">An error occurred while fetching data</string>
+    <string name="error_subtitle_database">An error occurred with the database</string>
+    <string name="error_subtitle_retrofit">An error occurred with the network</string>
+    <string name="error_album_subtitle">Album not found in database</string>
+    <string name="error_subtitle_network">sorry there are no connection</string>
+    <string name="retry">Retry</string>
+    <string name="no_network">No network</string>
+</resources>
