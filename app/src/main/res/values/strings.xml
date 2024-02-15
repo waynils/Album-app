@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Albums</string>
+    <string name="title_albums">List Albums</string>
+    <string name="title_album">Album</string>
+    <string name="album_screen_title">Welcome to Album app</string>
+    <string name="error_title">Sorry</string>
+    <string name="error_album_subtitle">Album not found in database</string>
+    <string name="error_subtitle_network">sorry there are no connection</string>
+    <string name="retry">Retry</string>
+    <string name="no_network">No network</string>
+    <string name="rank_album">Rank %1$s</string>
+</resources>
