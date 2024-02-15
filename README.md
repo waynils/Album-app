@@ -11,6 +11,15 @@
 So for this project I make this choice (below) for have a high-performance, maintainable and
 scalable application. (if the backend decide to give me a paginated json...)
 
+# App : 
+ * Display list of Album
+ * Display detail of Album
+ * Always listen network connectivity
+ * Display a snackbar on no internet
+ * Auto refresh when internet is back
+ * Rotation keep position
+
+
 * Clean Archi
   * Single activity architecture
   * MVVM for presentation layer
