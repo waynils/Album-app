@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    namespace 'com.wb.data'
+}
+
+dependencies {
+
+    api project(":domain")
+
+    implementation libs.androidx.core.ktx
+    implementation libs.coroutines
+
+    implementation libs.androidx.room.runtime
+    implementation libs.androidx.room.paging
+    implementation libs.androidx.paging.runtime
+    annotationProcessor libs.androidx.room.compiler
+    kapt libs.androidx.room.compiler
+    implementation libs.androidx.room.ktx
+
+    // Retrofit & Gson.
+    implementation libs.retrofit
+    implementation libs.retrofit.converter.gson
+    implementation libs.okhttp3.logging.interceptor
+
+    // hilt
+    implementation libs.google.hilt
+    kapt libs.google.hilt.compiler
+
+    androidTestImplementation libs.bundles.test
+    androidTestImplementation libs.espresso
+
+    testImplementation libs.bundles.test
+
+}
