@@ -25,7 +25,7 @@ private const val USER_AGENT_ANDROID = "Android"
 data class AlbumPictureData(val urlPicture: String)
 
 @Composable
-fun AlbumPicture(data: AlbumPictureData, modifier: Modifier = Modifier) {
+fun PickupPicture(data: AlbumPictureData, modifier: Modifier = Modifier) {
 
     Image(
         painter = rememberAsyncImagePainter(
